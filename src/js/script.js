@@ -68,4 +68,22 @@ $(document).ready(function() {
     validateForms('#consultation form');
     validateForms('#order form');
 
+    /* Modal phone mask */
+    $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+    /* Submit form */
+    $('form').submit(function(e){
+        e.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "mailer/smart.php",
+            data: $(this).serialize()
+        }).done(function(){
+            $(this).find("input").val("");
+            $('#consultation, #order').fadeOut();
+            $('.overlay, #thanks').fadeIn('slow');
+            $('form').trigger('reset');
+        });
+        return false;
+    });
 });
