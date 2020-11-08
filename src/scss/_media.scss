@@ -17,7 +17,7 @@
     }
     .subheader {
         &_link {
-            font-size: 26px;
+            font-size: 25px;
         }
         &_promo {
             font-size: 11px;
@@ -63,8 +63,6 @@
             color: white;
             font-size: 18px;
         }
-
-
     }
     .subheader {
         &_call {
@@ -73,8 +71,80 @@
         &_phone {
             display: none;
         }
+        &_link{
+            text-align: center;
+        }
+        &_promo{
+            text-align: center;
+        }
+    }
+    .button{
+        &_call{
+            display: block;
+            margin: 10px auto;
+        }
     }
     .none_767 {
+        display: none;
+    }
+    .contacts{
+        &_left {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+        &_right {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .hamburger{
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 25px;
+        height: 25px;
+        span{
+            display: block;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            height: 3px;
+            width: 100%;
+            background-color: #fff;
+            transition: 0.5s all;
+            
+        }
+        &_active{
+            span{
+                margin-top: -3px;
+                margin-bottom: -3px;
+                &:nth-child(1){
+                    transform: translateY(14px) rotate(-45deg);
+                }
+                &:nth-child(2){
+                    display: none;
+                }
+                &:nth-child(3){
+                    transform: translateY(14px) rotate(45deg);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 477px){
+
+    .subheader {
+        &_link {
+            margin: 0;
+            width: 80%;
+        }
+    }
+
+
+    .subheader_promo{
         display: none;
     }
 }

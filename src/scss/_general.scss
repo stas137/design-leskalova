@@ -132,9 +132,13 @@
     }
 }
 
+.hamburger{
+    display: none;
+}
+
 .promo {
     z-index: 1;
-    min-height: 800px;  
+    height: 100vh;  
     background-image: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../img/main.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -172,12 +176,6 @@
 .design-uslugi {
     background-color: white;
     padding: 100px 0px;
-    &_header {
-        @include block_header();       
-    }
-    &_subheader {
-        @include block_subheader();       
-    }
 
     &_img {
         margin-top: 30px;
@@ -199,12 +197,7 @@
 .price {
     background-color: #f0f0f0;
     padding: 100px 0px;
-    &_header {
-        @include block_header();       
-    }
-    &_subheader {
-        @include block_subheader();       
-    }
+
     &_card {
         margin: 30px 0 30px 0;
         padding: 20px 0 50px 0;
@@ -225,9 +218,6 @@
 .how-work {
     background-color: white;
     padding: 100px 0px;
-    &_header {
-        @include block_header();
-    }
     &_img {
         img {
             display: block;
@@ -253,7 +243,6 @@
     background-color: #f0f0f0;
     padding: 100px 0px;
     &_header {
-        @include block_header();
         margin-bottom: 30px;
     }
 }
@@ -261,9 +250,7 @@
 .contacts {
     background-color: white;
     padding: 100px 0px;
-    &_header {
-        @include block_header();
-    }
+
     &_phone {
         display: block;
         margin-top: 30px;
@@ -306,7 +293,6 @@
             cursor: pointer;
         }
     }
-
     &_left {
         display: flex;
         justify-content: flex-start;
