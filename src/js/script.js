@@ -1,9 +1,8 @@
 $(document).ready(function() {
-    
-    
+        
     /* Smooth scroll up */
     $(window).scroll(function() {
-        if ($(this).scrollTop() > 800) {
+        if ($(this).scrollTop() > 650) {
             $('.pageup').fadeIn();
         } else {
             $('.pageup').fadeOut();
@@ -87,3 +86,26 @@ $(document).ready(function() {
         return false;
     });
 });
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    const menu = document.querySelector('.menu');
+    let menuLink = document.querySelectorAll('.menu_link');
+    const hamburger = document.querySelector('.hamburger');
+
+    //console.log(menuLink);
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        menu.classList.toggle('menu_active');
+    });
+
+    menuLink.forEach((item) => {
+            item.addEventListener('click', () => {
+                hamburger.classList.toggle('hamburger_active');
+                menu.classList.toggle('menu_active');
+                console.log('toggle2');
+            });
+            console.log(item);
+        });
+})
