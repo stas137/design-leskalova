@@ -13,13 +13,13 @@ $mail->CharSet = 'utf-8';
 $mail->isSMTP();                                      // Set mailer to use SMTP
 $mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'stas137@mail.ru';                 // Наш логин
-$mail->Password = 'Stat137!Pest153';                           // Наш пароль от ящика
+$mail->Username = 'design-leskalova@mail.ru';                 // Наш логин
+$mail->Password = 'KTav8Trad23';                           // Наш пароль от ящика
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
  
-$mail->setFrom('stas137@mail.ru', 'Заявка с сайта Design-Leskalova.ru');   // От кого письмо 
-$mail->addAddress('k_leskalova@mail.ru');     // Add a recipient
+$mail->setFrom('design-leskalova@mail.ru', 'Заявка с сайта Design-Leskalova.ru');   // От кого письмо 
+$mail->addAddress('design-leskalova@mail.ru');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
