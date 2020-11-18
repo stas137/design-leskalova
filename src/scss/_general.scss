@@ -3,6 +3,41 @@
     src: url(../fonts/19046.ttf); /* Путь к файлу со шрифтом */
 }
 
+.block-header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: black;
+    text-align: center;
+    &_main{
+        font-size: 50px;
+        font-weight: 700;
+        line-height: 56px;
+    }
+    &_submain{
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 26px;
+    }
+}
+
+.elem-title {
+    margin-top: 20px;
+    color: black;
+    text-align: center; 
+
+    &_main{
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+    &_submain {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+}
+
 .header {
     position: relative;
 }
@@ -17,6 +52,10 @@
     line-height: 16px;
     text-transform: uppercase;
     background-image: linear-gradient(to top, #ff8000 0%, #ff9933 100%);
+
+    &:hover {
+        background-image: linear-gradient(to top, #ff8000 0%, #ff9933 100%);
+    }
 
     &_call {
         margin-top: 10px;
@@ -34,7 +73,7 @@
 .mainheader {
     position: fixed;
     width: 100%;
-    z-index: 9999;
+    z-index: 999;
     height: 50px;
     background-color: $mainheader-color;
 }
@@ -132,9 +171,13 @@
     }
 }
 
+.hamburger{
+    display: none;
+}
+
 .promo {
     z-index: 1;
-    min-height: 800px;  
+    height: 100vh;  
     background-image: linear-gradient(to right, rgba(0,0,0,.6), rgba(0,0,0,.6)), url(../img/main.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -172,12 +215,6 @@
 .design-uslugi {
     background-color: white;
     padding: 100px 0px;
-    &_header {
-        @include block_header();       
-    }
-    &_subheader {
-        @include block_subheader();       
-    }
 
     &_img {
         margin-top: 30px;
@@ -186,48 +223,23 @@
             margin: 0 auto;
         }
     }
-
-    &_title {
-        @include block_title();
-    }
-
-    &_subtitle {
-        @include block_subtitle();
-    }
 }
 
 .price {
     background-color: #f0f0f0;
     padding: 100px 0px;
-    &_header {
-        @include block_header();       
-    }
-    &_subheader {
-        @include block_subheader();       
-    }
+
     &_card {
         margin: 30px 0 30px 0;
         padding: 20px 0 50px 0;
         background-color: white;
         border-radius: 5px;
     }
-    &_title {
-        @include block_title();
-    }
-    &_subtitle {
-        @include block_subtitle();
-    }
-    &_tariff {
-        @include block_title();
-    }
 }
 
 .how-work {
     background-color: white;
     padding: 100px 0px;
-    &_header {
-        @include block_header();
-    }
     &_img {
         img {
             display: block;
@@ -235,12 +247,10 @@
         }
     }
     &_title {
-        @include block_title();
         margin: 0px;
         text-align: left;
     }
     &_subtitle {
-        @include block_subtitle();
         text-align: left;
     }
     &_card {
@@ -253,7 +263,6 @@
     background-color: #f0f0f0;
     padding: 100px 0px;
     &_header {
-        @include block_header();
         margin-bottom: 30px;
     }
 }
@@ -261,9 +270,7 @@
 .contacts {
     background-color: white;
     padding: 100px 0px;
-    &_header {
-        @include block_header();
-    }
+
     &_phone {
         display: block;
         margin-top: 30px;
@@ -306,7 +313,6 @@
             cursor: pointer;
         }
     }
-
     &_left {
         display: flex;
         justify-content: flex-start;
@@ -355,7 +361,6 @@
     }
 
     &__subtitle {
-        @include block_subtitle();
         text-align: center;
     }
 
